@@ -641,14 +641,14 @@ opacity: 1;}
 
     }
     .prg1{
-        width:70%;
+        width:10%;
     }
     .prg2{
-        width:20%;
+        width:30%;
 
     }
     .prg3{       
-         width:90%;
+         width:20%;
     }
     .prg4{
         width:50%;
@@ -1058,4 +1058,14 @@ footer img{
     background:rgb(243, 240, 240);
 }
 
+#progress{
 
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    position: fixed;
+    margin-top: 100px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+
+}

@@ -60,6 +60,7 @@
 
      
 </header>
+
 <!-- slider is started -->
 <div id="slider" class="carousel slide" data-ride="carousel">
   
@@ -107,7 +108,7 @@
       <article id="sliderart3">
         <div id="sliderart3-content">
 
-      <h1>We Came In Peace</h1>
+      <h1 id='txt'></h1>
       <h3>For all Mankid</h3>
       <a href="#">
         
@@ -138,29 +139,29 @@
   Nam ornare rhoncus rutrum. In est mi, blandit vel interdum eget,
    fermentum a sapien. Quisque vitae ipsum nunc.</p>
 <article class="row" id="cards">
-  <div class="col-lg-2 col-md-5 col-sm-12 card" >
-    <i class="far fa-sun cardicon"></i>   <div class="card-body">
+  <div class="col-lg-2 col-md-5 col-sm-12 card" id='a'>
+    <i class="far fa-sun cardicon" ></i>   <div class="card-body">
       <h5 class="card-title">SOLAR SYSTEM</h5>
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#" class="btn btn-primary btnbtn">READ MORE <i class="fas fa-rocket moreicon"></i></a>
     </div>
   </div>
-  <div class="col-lg-2 col-md-5 col-sm-12 card" >
-    <i class="fas fa-globe-africa cardicon"></i>   <div class="card-body">
+  <div class="col-lg-2 col-md-5 col-sm-12 card" id='b'>
+    <i class="fas fa-globe-africa cardicon" ></i>   <div class="card-body">
       <h5 class="card-title">PLANET EARTH</h5>
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#" class="btn btn-primary btnbtn">READ MORE <i class="fas fa-rocket moreicon"></i></a>
     </div>
   </div>
-  <div class="col-lg-2 col-md-5 col-sm-12 card" >
-    <i class="fas fa-space-shuttle cardicon"></i>   <div class="card-body">
+  <div class="col-lg-2 col-md-5 col-sm-12 card" id='c'>
+    <i class="fas fa-space-shuttle cardicon" ></i>   <div class="card-body">
       <h5 class="card-title">ASTRONOMY PROJECTS</h5>
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#" class="btn btn-primary btnbtn">READ MORE <i class="fas fa-rocket moreicon"></i></a>
     </div>
   </div>
-  <div class="col-lg-2 col-md-5 col-sm-12 card" >
-    <i class="far fa-lightbulb cardicon"></i>   <div class="card-body">
+  <div class="col-lg-2 col-md-5 col-sm-12 card" id='d'>
+    <i class="far fa-lightbulb cardicon" ></i>   <div class="card-body">
       <h5 class="card-title">ASTRONOMY IDEAS</h5>
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#" class="btn btn-primary btnbtn">READ MORE<i class="fas fa-rocket moreicon"></i></a>
@@ -306,25 +307,25 @@
     
       
   <div class="progress">
-      <div class="progress-bar progbar prg1"><div class="one"><span class="oneinfo">56</span><i class="fa fa-rocket progicon"></i></div> 
+      <div class="progress-bar progbar prg1" id="prg1"><div class="one"><span class="oneinfo">56</span><i class="fa fa-rocket progicon"></i></div> 
       <span class="proginfo">Projects</span></div>
   </div>
       
   <div class="progress">
      
-      <div class="progress-bar progbar prg2" > <div class="one"><span class="oneinfo">258</span><i class="fa fa-users progicon"></i></div> 
+      <div class="progress-bar progbar prg2"  id="prg2"> <div class="one"><span class="oneinfo">258</span><i class="fa fa-users progicon"></i></div> 
       <span class="proginfo">Staff</span></div>
   </div>
     
   <div class="progress">
       
-      <div class="progress-bar progbar prg3" >
+      <div class="progress-bar progbar prg3"  id="prg3">
         <div class="one"><span class="oneinfo">25</span><i class="fa fa-trophy progicon"></i></div> 
         <span class="proginfo">Awards</span></div>
   </div>
      
   <div class="progress">
-      <div class="progress-bar progbar prg4" >
+      <div class="progress-bar progbar prg4"  id="prg4" >
         <div class="one"><span class="oneinfo">958</span><i class="fa fa-suitcase progicon"></i></div> 
         <span class="proginfo">Clients</span></div>
   </div>
@@ -529,4 +530,67 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script> 
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lacquer|Modak|Odibee+Sans|Sriracha&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script></body>
+    <script type="text/javascript">
+    	
+
+    	window.onload = function() {
+    		var text = 'We Came In Peace',
+    			x = 0,
+    			txt = document.querySelector('#txt');
+
+    		var id = setInterval(function(){
+
+    			txt.textContent += text[x];
+
+    			if( x < text.length -1){
+    				x++;
+    			}else{
+    				clearInterval(id);
+    			}
+
+    			
+
+    			
+        },100);
+        
+        var a = document.getElementById('a'),
+            b = a.nextElementSibling,
+            c = b.nextElementSibling,
+            d = c.nextElementSibling;
+        a.onmouseover = onMouseover;
+        a.onmouseleave = onMouseLeave;
+        b.onmouseover = onMouseover;
+        b.onmouseleave = onMouseLeave;
+        c.onmouseover = onMouseover;
+        c.onmouseleave = onMouseLeave;
+        d.onmouseover = onMouseover;
+        d.onmouseleave = onMouseLeave;
+
+
+
+        function onMouseover(){
+          this.firstElementChild.style.marginLeft= '40%';
+          
+        }
+        function onMouseLeave(){
+          this.firstElementChild.style.marginLeft= '0%';
+        }
+
+      }
+      var sectionSix = document.querySelector('#sect6');
+    sectionSix.onmouseover = function (){
+      console.log('Hello');
+    	var proccesOne = document.querySelector('#prg1'),
+    		proccesTwo = document.querySelector('#prg2'),
+    		proccesThree = document.querySelector('#prg3'),
+        proccesFour = document.querySelector('#prg4');
+        
+        proccesOne.style.width = ((window.scrollY / (document.body.scrollHeight - window.innerHeight))*100) -40 +'%';
+        proccesTwo.style.width = ((window.scrollY / (document.body.scrollHeight - window.innerHeight))*100) +'%';
+        proccesThree.style.width = ((window.scrollY / (document.body.scrollHeight - window.innerHeight))*100)-15 +'%';
+        proccesFour.style.width = ((window.scrollY / (document.body.scrollHeight - window.innerHeight))*100)-30 +'%';
+    
+    };
+
+    </script>
 </html>
